@@ -105,7 +105,7 @@
 	<div class="select-container">
 		<select bind:value={selectedCity} on:change={loadCityData}>
 			{#each Object.keys(cities) as city}
-				<option value={city}>{city}</option>
+				<option aria-label={city} value={city}>{city}</option>
 			{/each}
 		</select>
 	</div>
@@ -115,6 +115,7 @@
 	{#if dates.length > 0}
 		<div class="slider-container">
 			<input
+				aria-label="Slide with Arrows"
 				type="range"
 				min="0"
 				max="{dates.length - 1}"
