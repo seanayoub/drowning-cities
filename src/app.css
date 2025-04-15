@@ -1,0 +1,70 @@
+.title-container {
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    font-size: 9rem;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    opacity: 0.8;
+    vertical-align: top;
+}
+
+.byline-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.byline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    border-bottom: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.byline-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.byline-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 1023px) {
+    @supports (object-fit:cover) {
+        img {
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 100vw;
+            height: calc(100vh - 82px);
+        }
+        .title {
+            font-size: 3rem;
+        }
+    }
+}
+
+footer {
+    background-color: lightgray;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
